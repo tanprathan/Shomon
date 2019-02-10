@@ -48,8 +48,8 @@ try:
 # Subscribe to data for the created alert
 	for banner in api.stream.alert(alert['id']):
 		print banner
-		# Check whether the banner is from python service
-	        # if 'tags' in banner and 'http' in banner['tags']:
+		# Check whether the banner is from ICS service
+	        # if 'tags' in banner and 'ics' in banner['tags']:
 		send_mail(from_addr = 'Alert@abc.xyz', 
           	to_addr_list = ['networkadmin@abc.xyz'], 
           	subject      = 'Shodan Monitor - '+profile+' - '+host, 
